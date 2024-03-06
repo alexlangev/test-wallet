@@ -12,15 +12,12 @@ export default function CreateWallet(){
         }
     }, [password1, password2]);
     
-    // function handleCreate() {
-    //     createNewWallet();
-    // }
-    
-
     function createWallet(){
         console.log("wallet created");
         console.log("wallet info encrypted in storage");
         console.log("logged in app");
+        const {accountOnePrivateKey, accountOnePublicKey, accountOneAddress, seedPhrase} = createNewWallet();
+        console.log(accountOnePrivateKey, accountOnePublicKey, accountOneAddress, seedPhrase);
     }
 
     return (
